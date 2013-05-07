@@ -4,12 +4,9 @@
 <%= will_paginate %>
 
 <ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= gravatar_for user, size: 52 %>
-      <%= link_to user.name, user %>
-    </li>
-  <% end %>
+  <%= render @users %>
 </ul>
+
+  <%= link_to "Delete", signup_path, class: "btn btn-large btn-primary" %>
 
 <%= will_paginate %>
